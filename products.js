@@ -1,0 +1,15 @@
+const products = [
+
+  {
+    name: "SacredArt Black Layered Polo",
+
+    price: "₹1813",
+
+    image: "images/sacredart-black.jpg",
+
+    category: "Shirts",
+
+    link: "https://myntr.it/F1E465x"
+  }
+
+];
