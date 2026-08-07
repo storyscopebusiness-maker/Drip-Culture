@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f2;
+  color: #111;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+  height: 75px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #fff;
+
+  border-bottom: 1px solid #e5e5e5;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.logo {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+
+.logo span {
+  font-weight: 300;
+}
+
+
+.header-tag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 560px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.3)
+    ),
+    url("images/sacredart-black.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  color: white;
+
+  padding: 70px 8%;
+}
+
+
+.hero-content {
+  max-width: 600px;
+}
+
+
+.small-title {
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
+  color: #ccc;
+}
+
+
+.hero h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  margin-bottom: 25px;
+}
+
+
+.hero-text {
+  max-width: 420px;
+  color: #d0d0d0;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+
+.explore-btn {
+  display: inline-block;
+
+  padding: 15px 23px;
+
+  background: white;
+  color: black;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 1px;
+
+  transition: 0.25s;
+}
+
+
+.explore-btn:hover {
+  background: #ddd;
+  transform: translateY(-2px);
+}
+
+
+/* ================= CATEGORY ================= */
+
+.category-section {
+  padding: 60px 7% 25px;
+}
+
+
+.category-title span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+
+.category-title h2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+
+.categories {
+  display: flex;
+  gap: 10px;
+
+  margin-top: 25px;
+
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+
+.category-btn {
+  background: transparent;
+
+  border: 1px solid #ccc;
+
+  padding: 11px 22px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s;
+}
+
+
+.category-btn:hover,
+.category-btn.active {
+  background: #111;
+  color: white;
+  border-color: #111;
+}
+
+
+/* ================= PRODUCTS ================= */
+
+main {
+  padding: 20px 7% 70px;
+}
+
+
+.products-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin: 25px 0;
+}
+
+
+.products-heading p {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+
+.products-heading h2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+
+#productCount {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+
+.products {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card {
+  background: white;
+
+  overflow: hidden;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.product-image {
+  width: 100%;
+
+  aspect-ratio: 3 / 4;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.5s;
+}
+
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+
+/* WATERMARK */
+
+.watermark {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  background: rgba(255,255,255,0.88);
+
+  padding: 7px 9px;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: bold;
+}
+
+
+/* PRODUCT INFO */
+
+.product-info {
+  padding: 17px;
+}
+
+
+.product-category {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: #888;
+
+  text-transform: uppercase;
+}
+
+
+.product-name {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin: 8px 0;
+}
+
+
+.price {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+
+.shop-btn {
+  display: block;
+
+  text-align: center;
+
+  background: #111;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 13px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  transition: 0.2s;
+}
+
+
+.shop-btn:hover {
+  background: #333;
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty {
+  grid-column: 1 / -1;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  color: #888;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #111;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+
+.footer-logo {
+  font-size: 21px;
+
+  font-weight: bold;
+
+  letter-spacing: 4px;
+}
+
+
+footer p {
+  color: #888;
+
+  font-size: 12px;
+
+  margin: 12px 0 25px;
+}
+
+
+.footer-line {
+  height: 1px;
+
+  background: #333;
+
+  max-width: 400px;
+
+  margin: auto;
+}
+
+
+footer small {
+  display: block;
+
+  color: #666;
+
+  margin-top: 20px;
+
+  font-size: 10px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+  .products {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .header {
+    height: 65px;
+    padding: 0 5%;
+  }
+
+
+  .logo {
+    font-size: 17px;
+  }
+
+
+  .header-tag {
+    display: none;
+  }
+
+
+  .hero {
+    min-height: 540px;
+
+    padding: 50px 6%;
+
+    background-position: center;
+  }
+
+
+  .hero h1 {
+    font-size: 55px;
+
+    letter-spacing: -3px;
+  }
+
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+
+  .category-section {
+    padding: 45px 5% 20px;
+  }
+
+
+  main {
+    padding: 15px 5% 60px;
+  }
+
+
+  .products-heading h2 {
+    font-size: 25px;
+  }
+
+
+  .products {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .product-info {
+    padding: 12px;
+  }
+
+
+  .product-name {
+    font-size: 13px;
+  }
+
+
+  .price {
+    font-size: 14px;
+  }
+
+
+  .shop-btn {
+    padding: 11px 5px;
+
+    font-size: 9px;
+  }
+
+  }
