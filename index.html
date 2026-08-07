@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Drip Culture | Premium Fashion</title>
+
+  <meta
+    name="description"
+    content="Discover trending men's fashion, premium outfits and everyday essentials."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      DRIP<span>CULTURE</span>
+    </div>
+
+    <div class="header-tag">
+      MEN'S FASHION
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="small-title">
+        CURATED FOR YOU
+      </p>
+
+      <h1>
+        Elevate<br>
+        Your Style.
+      </h1>
+
+      <p class="hero-text">
+        Discover trending fits, premium pieces
+        and effortless everyday fashion.
+      </p>
+
+      <a href="#products" class="explore-btn">
+        EXPLORE COLLECTION →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="category-section">
+
+    <div class="category-title">
+      <span>SHOP</span>
+      <h2>Categories</h2>
+    </div>
+
+    <div class="categories">
+
+      <button
+        class="category-btn active"
+        onclick="filterProducts('All', this)">
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterProducts('Shirts', this)">
+        Shirts
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterProducts('T-Shirts', this)">
+        T-Shirts
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterProducts('Jeans', this)">
+        Jeans
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="filterProducts('Shoes', this)">
+        Shoes
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <main>
+
+    <div class="products-heading">
+
+      <div>
+        <p>HANDPICKED</p>
+        <h2>Latest Drops</h2>
+      </div>
+
+      <span id="productCount">
+        1 PRODUCT
+      </span>
+
+    </div>
+
+
+    <section
+      class="products"
+      id="products">
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      DRIP CULTURE
+    </div>
+
+    <p>
+      Your destination for modern men's fashion.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <small>
+      © 2026 Drip Culture. All rights reserved.
+    </small>
+
+  </footer>
+
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+  </html>
