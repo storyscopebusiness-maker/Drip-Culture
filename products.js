@@ -5,7 +5,7 @@ const products = [
 
     price: "₹1813",
 
-    image: "images/sacredart-black.png",
+    image: "sacredart-black.png",
 
     category: "Shirts",
 
